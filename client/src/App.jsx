@@ -5,7 +5,7 @@ import Chatbox from './components/Chatbox'
 import Credits from './pages/Credits'
 import Community from './pages/Community'
 import { assets } from './assets/assets'
-
+import './assets/prism.css'
 
 const App = () => { 
 
@@ -17,8 +17,11 @@ const App = () => {
     onClick={()=>setIsMenuOpen(true)}/>}
     <div className='dark:bg-gradient-to-b from-[#242124] to-[#000000] dark:text-white'>
        <div className='flex h-screen w-screen'>
+
       <Sidebar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+
       <Routes>
+        
          <Route path='/' element={<Chatbox />} />
          <Route path='/credits' element={<Credits />} />
          <Route path='/community' element={<Community />}/>
